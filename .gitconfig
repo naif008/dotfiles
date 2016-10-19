@@ -1,0 +1,5 @@
+[user]
+	name = Naif
+	email = dotnet4ever@gmail.com
+[credential]
+	helper = osxkeychain
