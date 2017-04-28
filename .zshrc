@@ -4,7 +4,7 @@ export PATH="/usr/local/bin:$PATH"
 
 # Powerline activation.
 
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each

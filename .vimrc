@@ -1,14 +1,10 @@
-
-" powerline activation
- source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-" source c:\users\naif\appdata\roaming\python\python27\site-packages\powerline\bindings\vim\plugin\powerline.vim
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'vim-airline/vim-airline'
 " solarize colorescheme
 Plugin 'altercation/vim-colors-solarized.git'
 " vim lucius colorscheme
@@ -19,6 +15,7 @@ call vundle#end()          " required
 
 filetype plugin indent on  " required 
 syntax on
+let g:airline_powerline_fonts = 1 " to populate g:airline_symbols
 " set background=dark
 " colorscheme solarized
 colorscheme lucius
@@ -33,10 +30,10 @@ set backspace=indent,eol,start
 
 " enabe hiddn buffers
 set hidden
-set hlsearch 
-" Enable enhanced command-line completion. Presumes you have compiled
-" with +wildmenu.  See :help 'wildmenu'
+
+" Enable enhanced command-line completion.
 set wildmenu
+set wildmode=list:longest
 
 " to recursively search all directories beneath current working directory when
 " you tab-complete fuzzy file finder!
@@ -50,12 +47,27 @@ nnoremap <silent> <leader>ev :vsplit $MYVIMRC<cr>
 " 's'ource 'v'imrc)
 nmap <silent> <leader>sv :so $MYVIMRC<cr>
 
+inoremap jk <esc>
+
 " c template file 
 au BufNewFile *.c 0r  ~/c/c_header.template 
 " run python script from vim
 nmap <silent> ,z :!python %<CR>
 
-" vimscripting
-echo "Naif"
-messages
+set relativenumber
 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Search stuff
+
+" fix vimregex to make it compatible with perl syntax
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch 
+set ignorecase
+set smartcase
+set incsearch
+nnoremap <C-l> :<C-u>nohlsearch<CR><C-l>

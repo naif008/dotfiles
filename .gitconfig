@@ -3,3 +3,5 @@
 	email = dotnet4ever@gmail.com
 [credential]
 	helper = osxkeychain
+[diff]
+	tool = vimdiff
