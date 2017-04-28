@@ -17,9 +17,9 @@ filetype plugin indent on  " required
 syntax on
 let g:airline_powerline_fonts = 1 " to populate g:airline_symbols
 " set background=dark
-" colorscheme solarized
-colorscheme lucius
-LuciusWhite
+colorscheme solarized
+"colorscheme lucius
+"LuciusWhite
 set guifont=Inconsolata\ for\ Powerline:h14
 set laststatus=2
 set noshowmode " Hide the default mode text
@@ -50,7 +50,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<cr>
 inoremap jk <esc>
 
 " c template file 
-au BufNewFile *.c 0r  ~/c/c_header.template 
+" au BufNewFile *.c 0r  ~/c/c_header.template 
 " run python script from vim
 nmap <silent> ,z :!python %<CR>
 
