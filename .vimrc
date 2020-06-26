@@ -69,7 +69,7 @@ inoremap jk <esc>
 " run python script from vim
 nmap <silent> ,z :!python %<CR>
 
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
